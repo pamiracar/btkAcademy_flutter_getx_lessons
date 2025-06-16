@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_dersleri/home_page/sayac_controller.dart';
-import 'package:flutter_getx_dersleri/sayi_controller.dart';
+import 'package:flutter_getx_dersleri/home_page/sayi_controller.dart';
 import 'package:get/get.dart';
 
 import 'home_page/home_page.dart';
+import 'home_page/sayi_controller.dart';
 
 void main() {
   Get.put(SayiController());
@@ -15,12 +16,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
+      getPages: [
+        GetPage(name: "/home", page: () => MyHomePage(),)
+      ],
+      initialRoute: "/home",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MyHomePage(),
     );
   }
 }
