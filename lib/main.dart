@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_dersleri/home_page/home_binding.dart';
 import 'package:flutter_getx_dersleri/home_page/sayac_controller.dart';
 import 'package:flutter_getx_dersleri/home_page/sayi_controller.dart';
 import 'package:get/get.dart';
@@ -7,7 +8,6 @@ import 'home_page/home_page.dart';
 import 'home_page/sayi_controller.dart';
 
 void main() {
-  Get.put(SayiController());
   runApp(const MyApp());
 }
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       getPages: [
-        GetPage(name: "/home", page: () => MyHomePage(),)
+        GetPage(name: "/home", page: () => MyHomePage(), binding: HomeBinding() )
       ],
       initialRoute: "/home",
       theme: ThemeData(
