@@ -27,6 +27,7 @@ class SayiController extends GetxController{
     debugPrint("Sayı Controller onClose");
   }
 
+
   @override
   void onReady() {
     super.onReady();
