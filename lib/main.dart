@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_dersleri/core/initial_binding.dart';
 import 'package:flutter_getx_dersleri/home_page/home_binding.dart';
 import 'package:flutter_getx_dersleri/home_page/sayac_controller.dart';
 import 'package:flutter_getx_dersleri/home_page/sayi_controller.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/second", page: () => SecondPage(), binding: SecondBinding(),)
       ],
       initialRoute: "/home",
+      initialBinding: InitialBinding(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),

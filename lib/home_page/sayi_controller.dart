@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_dersleri/services/shared_preferences_service.dart';
 import 'package:get/get.dart';
 
 class SayiController extends GetxController{
@@ -12,6 +13,12 @@ class SayiController extends GetxController{
   void onInit() {
     super.onInit();
     debugPrint("Sayı Controller onInit");
+    _test();
+  }
+
+  _test(){
+    var sharedService = Get.find<SharedPreferencesService>();
+    sharedService.saveData("tc", "71914155148");
   }
 
   @override
