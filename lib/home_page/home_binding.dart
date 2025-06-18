@@ -5,7 +5,8 @@ import 'package:get/get.dart';
 class HomeBinding extends Bindings{
   @override
   void dependencies() {
-    Get.put(SayiController());
+    // Get.put(SayiController());
+    Get.lazyPut(() => SayiController(),);
     Get.put(SayacController());
 
   }
