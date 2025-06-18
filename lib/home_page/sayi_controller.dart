@@ -10,15 +10,17 @@ class SayiController extends GetxController{
     randomSayi.value = Random().nextInt(100);
   }
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
     debugPrint("Sayı Controller onInit");
-    _test();
+    await _test();
   }
 
-  _test(){
+  _test() async {
     var sharedService = Get.find<SharedPreferencesService>();
-    sharedService.saveData("tc", "71914155148");
+    await sharedService.saveData("tc", "71914155148");
+    var okunanDeger = sharedService.getData("tc");
+    debugPrint(okunanDeger);
   }
 
   @override
