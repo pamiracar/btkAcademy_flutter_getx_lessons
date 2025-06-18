@@ -23,6 +23,7 @@ class SayiController extends GetxController{
     debugPrint(okunanDeger);
   }
 
+
   @override
   void onClose() {
     super.onClose();
