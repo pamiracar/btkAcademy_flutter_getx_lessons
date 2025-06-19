@@ -19,5 +19,6 @@ class InitialBinding extends Bindings {
     debugPrint("3 saniye bitti!");
 
     Get.offAllNamed("/home");
+
   }
 }
