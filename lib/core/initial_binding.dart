@@ -17,5 +17,7 @@ class InitialBinding extends Bindings {
     debugPrint("3 saniye bekleniyor...");
     await Future.delayed(Duration(seconds: 3));
     debugPrint("3 saniye bitti!");
+
+    Get.offAllNamed("/home");
   }
 }
