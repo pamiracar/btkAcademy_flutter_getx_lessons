@@ -6,6 +6,7 @@ class AnimationControllerr extends GetxController {
   final containerHeight = 100.0.obs;
   final containerColor = Colors.blue.obs;
   final radius = 10.0.obs;
+  final containerOpacity = 1.0.obs;
 
   void boyutDegis(){
     containerWidth.value = containerWidth.value == 100.0 ? 200.0 : 100.0;
@@ -25,7 +26,12 @@ class AnimationControllerr extends GetxController {
     containerHeight.value = 100.0;
     radius.value = 10.0;
     containerColor.value = Colors.blue;
+    containerOpacity.value = 1.0;
     
+  }
+
+  void changeOpacity(){
+    containerOpacity.value = containerOpacity.value == 1.0 ? 0.3 : 1.0;
   }
 
 }

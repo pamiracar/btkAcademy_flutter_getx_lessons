@@ -8,7 +8,7 @@ class AnimationPage extends GetView<AnimationControllerr> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(centerTitle: true,title: Text("Animasyonlar"),),
+      appBar: AppBar(centerTitle: true, title: Text("Animasyonlar"),),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -17,16 +17,18 @@ class AnimationPage extends GetView<AnimationControllerr> {
               Text("AnimatedContainer Example"),
               SizedBox(height: 10,),
               Obx(
-                () => AnimatedContainer(
-                  duration: Duration(seconds: 1),
-                  curve: Curves.easeInOut,
-                  width: controller.containerWidth.value,
-                  height: controller.containerHeight.value,
-                  decoration: BoxDecoration(
-                    color: controller.containerColor.value,
-                    borderRadius: BorderRadius.circular(controller.radius.value),
-                  ),
-                ),
+                    () =>
+                    AnimatedContainer(
+                      duration: Duration(seconds: 1),
+                      curve: Curves.easeInOut,
+                      width: controller.containerWidth.value,
+                      height: controller.containerHeight.value,
+                      decoration: BoxDecoration(
+                        color: controller.containerColor.value,
+                        borderRadius: BorderRadius.circular(
+                            controller.radius.value),
+                      ),
+                    ),
               ),
               SizedBox(height: 8,),
               Wrap(
@@ -52,7 +54,28 @@ class AnimationPage extends GetView<AnimationControllerr> {
               ElevatedButton(
                 onPressed: controller.animasyonlariSifirla,
                 child: const Text("Animasyonları Sıfırla"),
-              )
+              ),
+              SizedBox(height: 8,),
+              Text("Animated Opacity"),
+              Obx(() {
+                return GestureDetector(
+                  onTap: controller.changeOpacity,
+                  child: AnimatedOpacity(
+                    opacity: controller.containerOpacity.value,
+                    duration: Duration(seconds: 2),
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 1),
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(controller.radius.value),
+                      ),
+                    ),
+                  ),
+                );
+              }),
+
             ],
           ),
         ),
