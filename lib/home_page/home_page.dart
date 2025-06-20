@@ -17,9 +17,12 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
-            ElevatedButton(onPressed: () {
-              Get.toNamed("/second");
-            }, child: const Text("Second page")),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/second");
+              },
+              child: const Text("Second page"),
+            ),
             GetBuilder(
               builder: (controller) => Text(
                 controller.sayac.toString(),
@@ -29,10 +32,13 @@ class MyHomePage extends StatelessWidget {
             ),
             const Text('Üretilen rastgele sayı: '),
             Obx(
-                  () =>
+              () =>
                   Text(Get.find<SayiController>().randomSayi.value.toString()),
             ),
-            GetX<SayiController>(builder: (controller) => Text(controller.randomSayi.value.toString()),)
+            GetX<SayiController>(
+              builder: (controller) =>
+                  Text(controller.randomSayi.value.toString()),
+            ),
           ],
         ),
       ),
