@@ -12,9 +12,20 @@ class AnimationControllerr extends GetxController {
     containerHeight.value = containerHeight.value == 100.0 ? 200.0 : 100.0;
   }
 
+  void renkDegis(){
+    containerColor.value = containerColor.value == Colors.blue ? Colors.yellow : Colors.blue;
+  }
+
+  void sekilDegis(){
+    radius.value = radius.value == 10.0 ? 100.0 : 10.0;
+  }
+
   void animasyonlariSifirla(){
     containerWidth.value = 100.0;
     containerHeight.value = 100.0;
+    radius.value = 10.0;
+    containerColor.value = Colors.blue;
+    
   }
 
 }

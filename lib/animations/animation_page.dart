@@ -18,7 +18,7 @@ class AnimationPage extends GetView<AnimationControllerr> {
               SizedBox(height: 10,),
               Obx(
                 () => AnimatedContainer(
-                  duration: Duration(seconds: 2),
+                  duration: Duration(seconds: 1),
                   curve: Curves.easeInOut,
                   width: controller.containerWidth.value,
                   height: controller.containerHeight.value,
@@ -34,15 +34,24 @@ class AnimationPage extends GetView<AnimationControllerr> {
                   ElevatedButton(
                     onPressed: controller.boyutDegis,
                     child: const Text("Boyut Değiştir"),
-
                   ),
+
+                  ElevatedButton(
+                    onPressed: controller.sekilDegis,
+                    child: const Text("Şekil Değiştir"),
+                  ),
+
+                  ElevatedButton(
+                    onPressed: controller.renkDegis,
+                    child: const Text("Renk Değiştir"),
+                  ),
+
 
                 ],
               ),
               ElevatedButton(
                 onPressed: controller.animasyonlariSifirla,
                 child: const Text("Animasyonları Sıfırla"),
-
               )
             ],
           ),
