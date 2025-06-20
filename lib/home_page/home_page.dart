@@ -23,6 +23,12 @@ class MyHomePage extends StatelessWidget {
               },
               child: const Text("Second page"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/animation");
+              },
+              child: const Text("Go to Animations Page"),
+            ),
             GetBuilder(
               builder: (controller) => Text(
                 controller.sayac.toString(),

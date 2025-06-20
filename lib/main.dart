@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_dersleri/animations/animation_bindings.dart';
+import 'package:flutter_getx_dersleri/animations/animation_page.dart';
 import 'package:flutter_getx_dersleri/core/initial_binding.dart';
 import 'package:flutter_getx_dersleri/home_page/home_binding.dart';
 import 'package:flutter_getx_dersleri/home_page/sayac_controller.dart';
@@ -26,7 +28,9 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: "/splash" , page: () => SplashPage(),),
         GetPage(name: "/home", page: () => MyHomePage(), binding: HomeBinding() ),
-        GetPage(name: "/second", page: () => SecondPage(), binding: SecondBinding(),)
+        GetPage(name: "/second", page: () => SecondPage(), binding: SecondBinding(),),
+        GetPage(name: "/animation", page: () => AnimationPage(), binding: AnimationBinding(),)
+
       ],
       initialRoute: "/splash",
       initialBinding: InitialBinding(),
