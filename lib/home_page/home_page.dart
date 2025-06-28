@@ -28,6 +28,7 @@ class MyHomePage extends StatelessWidget {
                 Get.toNamed("/animation");
               },
               child: const Text("Go to Animations Page"),
+              
             ),
             GetBuilder(
               builder: (controller) => Text(
